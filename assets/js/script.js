@@ -1,3 +1,6 @@
-const waterEffect = document.getElementById('water');
+const waterEffect = document.getElementById("water");
+const main = document.getElementById("main")
 
-waterEffect.addEventListener("click", ()=> waterEffect.classList.add("water-button"));
+waterEffect.addEventListener("click", () => {
+  main.classList.add("show");
+});
