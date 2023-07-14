@@ -1,4 +1,5 @@
 body {
+    color: #fafafa;
     padding: 30px;
 }
 
@@ -129,3 +130,51 @@ button {
 }
 
 /* ------------------------------------------------------------------- Main */
+
+.hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3,h1,p {
+    color: #fafafa;
+}
+
+.cup {
+    background-color: #fafafa;
+    border: 2px solid blue;
+    color: blue;
+    height: 160px;
+    width: 120px;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cup.cup-small {
+    height: 65px;
+    width: 50px;
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5 ease;
+}
+
+.cup.cup-small.full {
+    background-color: #6ab3f8;
+    color: white;
+}
+
+.cups {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    text-align: center;
+}
