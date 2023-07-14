@@ -1,14 +1,37 @@
-.container {
-    height: 90vh;
-    background-color: aqua;
-    padding: 20px;
+body {
+    padding: 30px;
 }
 
-.container img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+.container {
+    background-image: url(/assets/images/drinkingWater.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    max-width: 500px !important;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 2px solid rgb(68, 137, 22);
+}
+
+
+.drinking {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(245, 90, 115);
+    color: #fafafa;
+    border: 2px solid purple;
+    border-radius: 10px !important;
+    box-shadow: 5px 5px 5px #7c604f6e;
+    padding: 10px;
 }
