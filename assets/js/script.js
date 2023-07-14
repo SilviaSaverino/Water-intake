@@ -1,4 +1,4 @@
-const waterEffect = document.getElementById("water");
+const waterEffect = document.getElementById("bounce");
 const main = document.getElementById("main")
 
 waterEffect.addEventListener("click", () => {

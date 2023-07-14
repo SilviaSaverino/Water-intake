@@ -29,11 +29,34 @@ button {
     cursor: pointer;
     background-color: rgb(245, 90, 115);
     color: #fafafa;
-    border: 2px solid purple;
+    border: 2px solid rgb(226, 6, 226);
     border-radius: 10px !important;
     box-shadow: 5px 5px 5px #7c604f6e;
     padding: 10px;
 }
+
+#bounce {
+    animation: bounceButton 3s 3;
+}
+
+@keyframes bounceButton {
+    0% {
+        transform: translate(0px, 0px);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      }
+      30% {
+        transform: translate(0px, 10px);
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.9);
+      }
+      55% {
+        transform: translate(0px, -10px);
+        box-shadow: 0 0 30px 10px rgba(255, 255, 255, 1);
+      }
+      100% {
+        transform: translate(0px, 0px);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+      }
+  }
 
 .show {
     background-color: #48bef5c8;
