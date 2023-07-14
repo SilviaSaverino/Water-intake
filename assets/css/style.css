@@ -1,0 +1,14 @@
+.container {
+    height: 90vh;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
