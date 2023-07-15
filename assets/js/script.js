@@ -15,6 +15,8 @@ smallCup.forEach((cup, idx) => {
   cup.addEventListener("click", () => fillUpCups(idx));
 });
 
+fillUpBigCup();
+
 function fillUpCups(idx) {
   if (
     smallCup[idx].classList.contains("full") &&
@@ -29,6 +31,22 @@ function fillUpCups(idx) {
     } else {
       cup.classList.remove("full");
     }
-  }); 
+  });
+  fillUpBigCup();
 }
 
+function fillUpBigCup() {
+  const selectedFullCups = document.querySelectorAll(".cup-small.full").length;
+  console.log(selectedFullCups);
+
+  const totalCups = smallCup.length
+  console.log(totalCups)
+
+  if(selectedFullCups === 0) {
+    percentage.style.visibility = "hidden"
+    percentage.style.height = 0
+  } else {
+    percentage.style.visibility = "visible"
+    percentage.style.height = `${selectedFullCups / totalCups * 160}px`
+  }
+}
