@@ -66,6 +66,9 @@ function fillUpBigCup() {
   } else {
     waterLeftToDrink.style.visibility = "visible"
     liters.innerText = `${2 - (250 * selectedFullCups / 1000)}L`
+    /* the above calculates the consumed water in liters, 
+    Each of the 250ml cups is divided by 1000 to convert it to liters.
+    So subtracting the amount from the goal of 2 liters we obtain the remaining amount. */
   }
 }
 
