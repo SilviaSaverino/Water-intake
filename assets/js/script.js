@@ -1,10 +1,11 @@
 const waterEffect = document.getElementById("bounce");
 const main = document.getElementById("main");
-
 const smallCup = document.querySelectorAll(".cup-small");
 const liters = document.getElementById("liters");
 const percentage = document.getElementById("percentage");
 const waterLeftToDrink = document.getElementById("remained");
+const container = document.getElementsByClassName("container");
+const funFact = document.getElementById("funFact");
 
 waterEffect.addEventListener("click", () => {
   main.classList.add("show");
@@ -46,29 +47,34 @@ function fillUpBigCup() {
   const selectedFullCups = document.querySelectorAll(".cup-small.full").length;
   console.log(selectedFullCups);
 
-  const totalCups = smallCup.length
-  console.log(totalCups)
+  const totalCups = smallCup.length;
+  console.log(totalCups);
 
-  if(selectedFullCups === 0) {
-    percentage.style.visibility = "hidden"
-    percentage.style.height = 0
+  if (selectedFullCups === 0) {
+    percentage.style.visibility = "hidden";
+    percentage.style.height = 0;
   } else {
-    percentage.style.visibility = "visible"
-    percentage.style.height = `${selectedFullCups / totalCups * 160}px`
+    percentage.style.visibility = "visible";
+    percentage.style.height = `${(selectedFullCups / totalCups) * 160}px`;
     /*the height is calculated dividing the selected cups by the total number of small cups(8) and the
     result is multiplied with the height of the big cup (160px) */
-    percentage.innerText = `${selectedFullCups / totalCups * 100}%`
+    percentage.innerText = `${(selectedFullCups / totalCups) * 100}%`;
   }
 
-  if(selectedFullCups === totalCups) {
-    waterLeftToDrink.style.visibility = "hidden"
-    waterLeftToDrink.style.height = 0
+  if (selectedFullCups === totalCups) {
+    waterLeftToDrink.style.visibility = "hidden";
+    waterLeftToDrink.style.height = 0;
+    showFunFactButton();
   } else {
-    waterLeftToDrink.style.visibility = "visible"
-    liters.innerText = `${2 - (250 * selectedFullCups / 1000)}L`
+    waterLeftToDrink.style.visibility = "visible";
+    liters.innerText = `${2 - (250 * selectedFullCups) / 1000}L`;
     /* the above calculates the consumed water in liters, 
     Each of the 250ml cups is divided by 1000 to convert it to liters.
     So subtracting the amount from the goal of 2 liters we obtain the remaining amount. */
   }
 }
 
+function showFunFactButton() {
+  funFact.classList.remove("hide");
+  funFact.classList.add("zoom")
+}
