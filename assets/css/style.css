@@ -201,6 +201,7 @@ p {
 
 .remained span {
     font-weight: bold;
+    font-size: 12px;
 }
 
 .remained small {
@@ -212,4 +213,5 @@ p {
     color: #fafafa;
     height: 0;
     transition: 0.5s ease;
+    font-weight: bold;
 }
