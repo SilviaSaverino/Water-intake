@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
 body {
     color: #fafafa;
     padding: 30px;
@@ -244,3 +246,35 @@ p {
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
     }
 }
+
+.funFactPage {
+    color: #fafafa;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.funFactContainer {
+    background-image: url(/assets/images/waterRisks2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90vh;
+    max-width: 500px !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    border: 2px solid rgb(68, 137, 22);
+}
+
+.waterInfo {
+    color: #831d1d;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    margin: 0 auto;
+}
+
